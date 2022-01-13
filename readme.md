@@ -18,12 +18,13 @@ Note: the cookies can be directly coppied from the Safari Books cookies out of C
 If the download works, but the packaging throws up errors (e.g. missing fonts).  Then fix the errors, e.g. install the Fonts, and re-run the packaging only stage.
 
 ```sh
-.//repackage.sh <book_id>
+./repackage.sh <book_id>
 
-.//repackage.sh 0321146530
+./repackage.sh 0321146530
 ```
 
 ## Credits
 Thank you to:
  https://github.com/lorenzodifuccia/safaribooks
+
 https://calibre-ebook.com/
