@@ -38,6 +38,8 @@ popd
     --embed-all-fonts \
     --insert-blank-line
 
+python3 upload-to-remarkable.py "output-pdfs/$title.pdf"
+
 # /Applications/calibre.app/Contents/MacOS/ebook-convert \
 #     "/Users/darren/Projects/Projects/python/safaribooks/$the_book/$book_id.epub" \
 #     "$title.epub" \

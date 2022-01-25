@@ -53,6 +53,11 @@ find  . -type f -name '*.css' -print0 | xargs -0 sed -i '' -e 's/DejaVuSerif/Dej
 find  . -type f -name '*.css' -print0 | xargs -0 sed -i '' -e 's/Ubuntu Mono BoldItal/Ubuntu Mono/g'
 find  . -type f -name '*.css' -print0 | xargs -0 sed -i '' -e 's/Ubuntu Mono Bold/Ubuntu Mono/g'
 find  . -type f -name '*.css' -print0 | xargs -0 sed -i '' -e 's/Ubuntu Mono Ital/Ubuntu Mono/g'
+find  . -type f -name '*.css' -print0 | xargs -0 sed -i '' -e 's/MyriadPro/Myriad Pro/g'
+find  . -type f -name '*.css' -print0 | xargs -0 sed -i '' -e 's/MinionPro/Minion Pro/g'
+find  . -type f -name '*.css' -print0 | xargs -0 sed -i '' -e 's/CourierStd.otf/Courier Std/g'
+find  . -type f -name '*.css' -print0 | xargs -0 sed -i '' -e 's%../fonts%fonts%g'
+
 
 mkdir -p OEBPS/Styles/fonts/
 mkdir -p OEBPS/Styles/css_assets/
