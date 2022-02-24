@@ -34,21 +34,23 @@ def upload_book(rm, rawDocument, folder):
     rm.upload(rawDocument, folder)
     print("done.")
 
-if len(sys.argv) != 2:
-    print(f"Usage {sys.argv[0]} <filename>")
-    exit()
+# MAIN
+if __name__ == "__main__":
+    if len(sys.argv) != 2:
+        print(f"Usage {sys.argv[0]} <filename>")
+        exit()
 
-filename = sys.argv[1]
+    filename = sys.argv[1]
 
-rm = Client()
-rm.renew_token()
+    rm = Client()
+    rm.renew_token()
 
-rawDocument = ZipDocument(doc=filename)
-print("File successfully zipped name=", rawDocument.metadata["VissibleName"])
-rawDocument.content["coverPageNumber"] = 0 # Ensure that the cover page is the first page
+    rawDocument = ZipDocument(doc=filename)
+    print("File successfully zipped name=", rawDocument.metadata["VissibleName"])
+    rawDocument.content["coverPageNumber"] = 0 # Ensure that the cover page is the first page
 
-books = find_books_subfolders(rm)
+    books = find_books_subfolders(rm)
 
-folder = select_folder_or_exit(books)
+    folder = select_folder_or_exit(books)
 
-upload_book(rm, rawDocument, folder)
+    upload_book(rm, rawDocument, folder)
